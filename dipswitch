@@ -1,0 +1,55 @@
+// C++ code
+//
+const int switch1 = 2;
+const int switch2 = 3;
+const int switch3 = 4;
+const int switch4 = 5;
+const int led1 = 13;
+const int led2 = 12;
+const int led3 = 11;
+const int led4 = 10;
+ 
+
+void setup()
+{
+  pinMode(switch1, INPUT);
+  pinMode(switch2, INPUT);
+  pinMode(switch3, INPUT);
+  pinMode(switch4, INPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  if (digitalRead(switch1) == HIGH) {
+  Serial.println("switch 1 has been turned on");
+    digitalWrite(led1, HIGH);
+  } else {
+    digitalWrite(led1, LOW);
+  }
+  
+    if (digitalRead(switch2) == HIGH) {
+  Serial.println("switch 2 has been turned on"); 
+      digitalWrite(led2, HIGH);
+  } else {
+      digitalWrite(led2, LOW);
+  }
+  
+    if (digitalRead(switch3) == HIGH) {
+  Serial.println("switch 3 has been turned on"); 
+      digitalWrite(led3, HIGH);
+  } else {
+      digitalWrite(led3, LOW);
+  }
+  
+    if (digitalRead(switch4) == HIGH) {
+  Serial.println("switch 4 has been turned on"); 
+      digitalWrite(led4, HIGH);
+  } else {
+      digitalWrite(led4, LOW);
+  }
+}
